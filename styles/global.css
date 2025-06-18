@@ -1,0 +1,392 @@
+/* Ensure root container fills the entire viewport */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex layout */
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let main content grow */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  width: 100%;
+}
+
+/* Styling */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+header,
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header a,
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+footer {
+  text-align: center;
+}
+
+/* ----- Events Page Specific Styling ----- */
+
+.filters-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filters-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.filters-container label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 500;
+}
+
+.filters-container input,
+.filters-container select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.no-events {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+/* -------- RSVP Page Styles -------- */
+
+.rsvps-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.rsvps-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ------- Create Event Page Styling ------- */
+
+.create-event-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.create-event-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #003366;
+}
+
+.create-event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.create-event-form label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.create-event-form input,
+.create-event-form select,
+.create-event-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.create-event-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.create-event-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.create-event-form button:hover {
+  background-color: #002244;
+}
+
+/* -------- Custom Event Grid/Card Layout -------- */
+
+.custom-event-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+
+.custom-event-card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-event-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.custom-event-content {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.custom-event-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.view-button {
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  background-color: #0d4b85;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.view-button:hover {
+  background-color: #093864;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.btn-join {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-leave {
+  background-color: #dc3545;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-view {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-event-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.event-card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 1rem;
+}
+
+.event-card-content {
+  padding: 16px;
+}
+
+.event-card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.view-button {
+  background-color: #333;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.join-button {
+  background-color: green;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.leave-button {
+  background-color: red;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.event-detail-image {
+  max-width: 100%;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.weather-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Home page padding override (if needed) */
+.home-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.home-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-intro {
+  flex: 1 1 300px;
+}
+
+.weather-widget {
+  flex: 0 0 200px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-widget img {
+  width: 64px;
+  height: 64px;
+}
+
+.weather-widget .temp {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.25rem 0;
+}
+
+.weather-widget .condition {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* slider image override so it never overflows */
+.home-slider-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.event-detail-container .event-image-wrapper {
+  width: 100%;
+  max-height: 400px;       /* same “tallness” as your slider */
+  overflow: hidden;
+  border-radius: 10px;     /* match your other rounded corners */
+  margin-bottom: 1.5rem;
+}
+.event-detail-container .event-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* crop to fill the box */
+  display: block;
+}
